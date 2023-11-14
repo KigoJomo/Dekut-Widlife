@@ -103,3 +103,36 @@ function showNotification() {
     copyNotification.style.display = "none";
   }, 2000); // Hide the notification after 2 seconds (2000 milliseconds)
 }
+
+const menu = document.getElementById("menu");
+const menuBtn = document.querySelector(".menuButton");
+const body_tint = document.querySelector(".body_tint");
+var menuOpen = false;
+menuBtn.addEventListener("click", () => {
+  if (menuOpen) {
+    menu.style.right = "-100%";
+    menuBtn.innerHTML = "more_horiz";
+    body_tint.style.display = "none";
+    menuOpen = false;
+  } else {
+    menu.style.right = "0";
+    menuBtn.innerHTML = "close";
+    body_tint.style.display = "block";
+    menuOpen = true;
+  }
+})
+body_tint.addEventListener("click", () => {
+  menu.style.right = "-100%";
+  menuBtn.innerHTML = "more_horiz";
+  body_tint.style.display = "none";
+  menuOpen = false;
+})
+
+section_links.forEach((sectionLink) => {
+  sectionLink.addEventListener("click", () => {
+    menu.style.right = "-100%";
+    menuBtn.innerHTML = "more_horiz";
+    body_tint.style.display = "none";
+    menuOpen = false;
+  })
+})
