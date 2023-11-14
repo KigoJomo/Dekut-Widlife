@@ -1,0 +1,81 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5vw;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+a {
+  font-size: 0.8rem;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html body .content {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  background-color: rgba(43, 43, 43, 0.6862745098);
+}
+html body .content a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+html body .content a span {
+  text-transform: capitalize;
+  color: #f0f0f0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+html body .content a .material-symbols-outlined {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+html body .content a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}/*# sourceMappingURL=thanks.css.map */

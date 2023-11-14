@@ -207,8 +207,8 @@ body {
       justify-content: center;
       position: relative;
       img {
-        width: 70%;
-        aspect-ratio: 1/1;
+        width: 80%;
+        aspect-ratio: 4/3.8;
         border-radius: 10px;
         box-shadow: $box-shadow;
         transition: all 0.5s ease;
@@ -234,7 +234,7 @@ body {
         gap: 3px;
         background: linear-gradient(135deg, $light-green, $dark-green);
         top: 15%;
-        left: 10%;
+        left: 7.5%;
         p {
           font-size: 0.7rem;
           text-wrap: wrap;
@@ -253,7 +253,7 @@ body {
         gap: 3px;
         background: linear-gradient(-135deg, $light-green, $dark-green);
         top: 70%;
-        right: 10%;
+        right: 7.5%;
         p {
           font-size: 0.7rem;
           text-wrap: wrap;
@@ -769,14 +769,15 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 1vw;
+    gap: 3vw;
 
     .card {
       flex: 1 1 35vw;
+      aspect-ratio: 4/1.5;
       min-width: 300px;
       min-height: 200px;
       padding: 3% 2%;
-      background-color: transparent;
+      background-color: $light-gray;
       border-radius: 10px;
       box-shadow: $box-shadow;
 
@@ -785,6 +786,12 @@ body {
       align-items: flex-start;
       justify-content: flex-start;
       gap: 2vh;
+
+      transition: all 0.5s ease;
+      &:hover {
+        transform: translateY(-5px);
+        transition: all 0.5s ease;
+      }
 
       h2 {
         width: 100%;
@@ -846,6 +853,22 @@ body {
 
   position: relative;
 
+  .notification {
+    width: 300px;
+    padding: 0 20px;
+    // border: 1px solid $primary-black;
+    z-index: 5;
+    box-shadow: 0px 0px 50px 10px #2b2b2baf;
+    aspect-ratio: 16/7;
+    background-color: $primary-white;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+  }
+
   .pair {
     display: flex;
     align-items: center;
@@ -854,12 +877,20 @@ body {
     .contact {
       padding: 1rem 2rem;
       min-width: 35vw;
+      box-shadow: $box-shadow;
       background-color: $primary-white;
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       gap: 2vw;
+
+      transition: all 0.5s ease;
+      &:hover {
+        transform: translateY(-5px);
+        transition: all 0.5s ease;
+      }
+
       img {
         height: 20vh;
         aspect-ratio: 1/1;
@@ -875,16 +906,34 @@ body {
         justify-content: center;
         gap: 3%;
         h2 {
+          text-align: left;
+          font-size: 1rem;
+          font-weight: 600;
         }
         p {
           text-transform: capitalize;
         }
-        a {
+        .phone {
+          display: flex;
+          align-items: center;
+          gap: 3%;
+          position: relative;
           .material-symbols-outlined {
             font-size: 1rem;
             color: $dark-green;
             font-weight: 400;
+            position: absolute;
+            z-index: 1;
           }
+          a {
+            z-index: 2;
+            padding-left: 1rem;
+            color: $dark-green;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+        a {
           display: flex;
           align-items: center;
           gap: 3%;
@@ -915,7 +964,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
+    padding: 0px 4vw;
     .logo {
       width: fit-content;
       display: flex;
@@ -929,15 +978,16 @@ body {
         text-transform: capitalize;
       }
     }
-    p{
+    p {
       text-align: center;
       text-transform: capitalize;
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
     .socials {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      gap: 2vw;
       .ig {
         background: url("../images/instagram.svg");
       }
@@ -950,11 +1000,17 @@ body {
       .ig,
       .twitter,
       .whatsapp {
-        width: 2rem;
+        width: 1.5rem;
         // border-radius: 50%;
         aspect-ratio: 1/1;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 70%;
+        transition: all 0.5s ease;
+        &:hover {
+          transform: translateY(-5px);
+          transition: all 0.5s ease;
+        }
       }
     }
   }

@@ -75,3 +75,31 @@ join_tint.addEventListener("click", () => {
   join_tint.classList.remove("tint-visible");
   reg_form.style.display = "none";
 });
+
+const phoneNumberLinks = document.querySelectorAll(".phone-number");
+const copyNotification = document.getElementById("copy-notification");
+
+phoneNumberLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents the link from navigating
+    const phoneNumber = this.textContent; // Get the phone number text
+    copyToClipboard(phoneNumber);
+    showNotification();
+  });
+});
+
+function copyToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+}
+
+function showNotification() {
+  copyNotification.style.display = "flex";
+  setTimeout(() => {
+    copyNotification.style.display = "none";
+  }, 2000); // Hide the notification after 2 seconds (2000 milliseconds)
+}
