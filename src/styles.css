@@ -1022,9 +1022,11 @@ body .container section:nth-child(even) {
     width: 100vw;
     height: 100vh;
     padding-top: 7vh;
+    overflow-y: hidden;
   }
   html body nav {
     width: 100%;
+    height: 7vh;
   }
   html body nav .logo {
     order: 1;
@@ -1570,9 +1572,380 @@ body .container section:nth-child(even) {
     display: none;
   }
   #join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vh;
+    position: relative;
+  }
+  #join form {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 6% 6%;
+    width: 85vw;
+  }
+  #join form h2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  #join form h2 .material-symbols-outlined {
+    font-size: 1.3rem;
+  }
+  #join form .input {
+    width: 100%;
+    border: 1px solid #2b2b2b;
+    border-radius: 7px;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+  #join form .input label {
+    position: absolute;
+    font-size: 0.8rem;
+    background-color: #f0f0f0;
+    padding: 0 1%;
+    top: -20%;
+    left: 5%;
+  }
+  #join form .input select,
+  #join form .input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 5%;
+    font-size: 0.9rem;
+  }
+  #join form .input select:focus,
+  #join form .input input:focus {
+    outline: none;
+  }
+  #join form .input select option,
+  #join form .input input option {
+    font-size: 0.9rem;
+  }
+  #join form .submit {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 3px 5px 0px rgba(43, 43, 43, 0.6862745098);
+    border-radius: 7px;
+    height: 7vh;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    background: linear-gradient(35deg, #b5c99a, #718355);
+  }
+  #join .tint {
+    display: none;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 43, 43, 0.6862745098);
+  }
+  #join .tint-visible {
+    display: block;
+  }
+  #join h1 {
+    position: relative;
+  }
+  #join h1::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10%;
+    content: "";
+    width: 40vw;
+    height: 0.5vh;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+  }
+  #join .cards {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+  }
+  #join .cards .card {
+    width: 98%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2% 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1vh;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(43, 43, 43, 0.6862745098);
+  }
+  #join .cards .card:hover {
+    transform: scale(1.01);
+  }
+  #join .cards .card::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 3vh;
+    border-left: 2px dotted #718355;
+    bottom: -3vh;
+    left: 10%;
+  }
+  #join .cards .card::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 3vh;
+    border-left: 2px dotted #718355;
+    bottom: -3vh;
+    right: 10%;
+  }
+  #join .cards .card h2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  #join .cards .card h2 .material-symbols-outlined {
+    font-size: 1.5rem;
+  }
+  #join .cards .card ul {
+    list-style-type: circle;
+    padding-left: 10vw;
+  }
+  #join .cards .card ul li {
+    font-size: 0.75rem;
+  }
+  #join .cards .card ul li span {
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: #718355;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  #join .cards .card p {
+    padding-left: 5vw;
+  }
+  #join .cards .card a {
+    width: 90%;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #b5c99a, #718355);
+    padding: 2% 0;
+  }
+  #join .cards .card a:hover {
+    transform: scale(1.05);
+  }
+  #join .cards .card:last-child {
+    align-items: center;
+  }
+  #join .cards .card:last-child h2 {
+    width: 100%;
+  }
+  #join .cards .card:last-child::before {
+    display: none;
+  }
+  #join .cards .card:last-child::after {
     display: none;
   }
   #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vh;
+    position: relative;
+  }
+  #contact .notification {
     display: none;
+    padding: 3% 5%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(43, 43, 43, 0.6862745098);
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+  }
+  #contact h2 {
+    margin-bottom: 2vh;
+    margin-top: -2vh;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+  #contact .pair {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vh;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #contact .pair .contact {
+    width: 100%;
+    padding: 3% 0;
+    padding-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(43, 43, 43, 0.6862745098);
+  }
+  #contact .pair .contact img {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 50%;
+    border: 1px solid #2b2b2b;
+  }
+  #contact .pair .contact .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+    position: relative;
+  }
+  #contact .pair .contact .details h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  #contact .pair .contact .details p {
+    text-transform: capitalize;
+  }
+  #contact .pair .contact .details .phone {
+    position: absolute;
+    right: 6%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+  }
+  #contact .pair .contact .details .phone .material-symbols-outlined {
+    font-size: 1rem;
+    color: #718355;
+    font-weight: 400;
+    position: absolute;
+    z-index: 1;
+  }
+  #contact .pair .contact .details .phone a {
+    position: relative;
+    right: 0;
+    z-index: 2;
+    padding-left: 1rem;
+    color: #718355;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+  #contact .pair .contact .details a {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    color: #718355;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+  #contact .pair .contact .details a .whatsapp {
+    width: 1.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background: url("../images/whatsapp.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+  }
+  #contact footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 4vw;
+  }
+  #contact footer .logo {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    gap: 0.5vw;
+  }
+  #contact footer .logo p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  #contact footer p {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+  }
+  #contact footer .socials {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3vw;
+  }
+  #contact footer .socials .ig {
+    background: url("../images/instagram.svg");
+  }
+  #contact footer .socials .twitter {
+    background: url("../images/twitter.svg");
+  }
+  #contact footer .socials .whatsapp {
+    background: url("../images/whatsapp.svg");
+  }
+  #contact footer .socials .ig,
+  #contact footer .socials .twitter,
+  #contact footer .socials .whatsapp {
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    transition: all 0.5s ease;
+  }
+  #contact footer .socials .ig:hover,
+  #contact footer .socials .twitter:hover,
+  #contact footer .socials .whatsapp:hover {
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
   }
 }/*# sourceMappingURL=styles.css.map */
