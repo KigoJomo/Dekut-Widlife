@@ -1525,6 +1525,9 @@ body {
       &::-webkit-scrollbar-thumb {
         background-color: $primary-black;
         border-radius: 10px;
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        background-clip: padding-box;
       }
 
       .slide {
@@ -1855,6 +1858,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 2vh;
+    padding-bottom: 10vh;
 
     position: relative;
 
