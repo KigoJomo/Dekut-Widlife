@@ -1,0 +1,123 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap";
+
+$--primary-black: #2b2b2b;
+$--dark-green: #718355;
+$--light-gray: #adadad;
+$--light-green: #b5c99a;
+$--primary-white: #f0f0f0;
+$--box-shadow: 0px 0px 10px 0px #2b2b2baf;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $--primary-black;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.617rem;
+  text-transform: capitalize;
+}
+h2 {
+  text-transform: capitalize;
+  font-size: 1.618rem;
+}
+p {
+  font-size: 1rem;
+}
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+
+  //universal classes/styles
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  button,
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: $--dark-green;
+    color: $--primary-white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+  }
+
+  .body {
+    width: 100%;
+    height: 100%;
+    padding-top: 7vh;
+    gap: 0;
+
+    background-color: $--primary-white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 0;
+
+    .tint {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $--primary-black;
+      opacity: 0.8;
+    }
+
+    header {
+      width: 100%;
+      height: 7vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      background-color: $--light-gray;
+      a {
+        gap: 8px;
+      }
+      nav {
+        gap: 24px;
+        a{
+          p{
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    section {
+      display: none;
+    }
+  }
+}
